@@ -1,0 +1,17 @@
+{
+  "name": "gtc-telegram-bot",
+  "version": "1.0.0",
+  "description": "GTC Telegram Bot - Cloudflare Worker",
+  "main": "worker.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "setup-webhook": "curl https://your-worker.workers.dev/setup",
+    "db:init": "wrangler d1 execute gtc-bot-db --file=schema.sql",
+    "db:init:remote": "wrangler d1 execute gtc-bot-db --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
