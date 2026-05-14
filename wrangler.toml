@@ -1,0 +1,17 @@
+name = "gtc-telegram-bot"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Secrets — set via: wrangler secret put BOT_TOKEN
+# wrangler secret put ADMIN_ID
+# wrangler secret put OXAPAY_API_KEY
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gtc-bot-db"
+database_id = "9a2ecdab-437b-42c4-be5d-4480ca915663"
+
+[[kv_namespaces]]
+binding = "BOT_STATE"
+id = "d8d50ea5fc1046cda20a338ec2260e4b"
